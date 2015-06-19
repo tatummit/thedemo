@@ -1,0 +1,4 @@
+tatum/app/config/ApplicationConfig.class
+tatum/app/model/Person.class
+tatum/app/Application.class
+tatum/app/controller/HelloController.class
