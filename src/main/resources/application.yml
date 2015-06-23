@@ -1,2 +1,5 @@
 server:
- port: 19000
+  port: 19000
+
+multipart.maxFileSize: 4MB
+multipart.maxRequestSize: 4MB

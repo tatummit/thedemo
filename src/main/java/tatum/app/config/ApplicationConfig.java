@@ -8,8 +8,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import tatum.app.exception.DemoRuntimeException;
+import tatum.app.factory.config.BinaryManagerConfig;
+import tatum.app.manager.data.BinaryManager;
+import tatum.app.factory.BinaryManagerFactory;
+import tatum.app.factory.imp.BinaryManagerFactoryImp;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -38,8 +42,20 @@ public class ApplicationConfig {
     }
 
     @Bean
+    public ApplicationProperties applicationProperties() {
+        return new ApplicationProperties();
+    }
+
+    @Bean
     @Autowired
-    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
-        return new JdbcTemplate(dataSource);
+    public BinaryManager binaryManager(ApplicationProperties applicationProperties) {
+        BinaryManagerConfig binaryManagerConfig = new BinaryManagerConfig();
+        binaryManagerConfig.setEndpoint(applicationProperties.getRootLocalBinaryPath());
+        BinaryManagerFactory binaryManagerFactory = new BinaryManagerFactoryImp(binaryManagerConfig);
+        try {
+            return binaryManagerFactory.createBinaryManager(Class.forName(applicationProperties.getBinaryManagerClass()));
+        } catch (ClassNotFoundException e) {
+            throw new DemoRuntimeException("Cannot found manager class",e);
+        }
     }
 }
