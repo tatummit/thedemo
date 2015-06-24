@@ -1,0 +1,17 @@
+{
+  "name": "thedemo-integration-test",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/tatummit/thedemo.git"
+  },
+  "devDependencies": {
+    "frisby": "~0.8.5",
+    "jasmine-node": "~1.14.5",
+    "json2xml": "~0.1.2",
+    "grunt": "^0.4.5",
+    "grunt-express": "~1.4.1",
+    "matchdep": "~0.3.0",
+    "grunt-shell": "1.1.2"
+  }
+}

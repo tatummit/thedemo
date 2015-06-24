@@ -1,4 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: /db/changelog/changesets/db.log.id1.createperson.changeset.yml
-      relativeToChangelogFile: false

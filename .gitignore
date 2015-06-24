@@ -1,0 +1,10 @@
+garuda-import-webapp/src/main/java/no/api/garuda/importwebapp/xmlbeans/
+target/
+.git
+*.iml
+.idea
+.project
+.classpath
+.springBeans
+.settings/*
+*/.settings/*
