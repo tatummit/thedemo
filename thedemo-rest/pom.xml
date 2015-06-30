@@ -3,16 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>area-deom</artifactId>
-        <groupId>arena-demo</groupId>
+        <artifactId>demo</artifactId>
+        <groupId>arena.demo</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>arena-demo</groupId>
-    <artifactId>arena-demo-web</artifactId>
+    <artifactId>thedemo-rest</artifactId>
+    <name>thedemo-rest</name>
 
     <dependencies>
+        <dependency>
+            <groupId>arena.demo</groupId>
+            <artifactId>thedemo-core</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -32,7 +37,6 @@
         <dependency>
             <groupId>org.codehaus.woodstox</groupId>
             <artifactId>woodstox-core-asl</artifactId>
-            <version>4.4.1</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -45,23 +49,16 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.4</version>
         </dependency>
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
         </dependency>
         <dependency>
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
-            <version>1.7</version>
         </dependency>
     </dependencies>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
 
     <build>

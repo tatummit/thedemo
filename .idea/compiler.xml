@@ -23,12 +23,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="thedemo-autotest" />
+        <module name="thedemo-core" />
         <module name="thedemo-rest" />
+        <module name="thedemo-test" />
+        <module name="thedemo-webapp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="thedemo" target="1.8" />
+      <module name="thedemo-autotest" target="1.8" />
+      <module name="thedemo-core" target="1.8" />
       <module name="thedemo-rest" target="1.8" />
+      <module name="thedemo-test" target="1.8" />
+      <module name="thedemo-webapp" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

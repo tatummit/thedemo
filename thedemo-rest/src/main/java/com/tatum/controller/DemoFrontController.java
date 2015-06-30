@@ -1,6 +1,6 @@
 package com.tatum.controller;
 
-import com.tatum.manager.DemoOperationCollection;
+import com.tatum.service.DemoOperationCollection;
 import com.tatum.model.BinaryObject;
 import com.tatum.model.Person;
 import org.apache.commons.io.IOUtils;

@@ -11,7 +11,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import com.tatum.exception.DemoRuntimeException;
 import com.tatum.factory.config.BinaryManagerConfig;
-import com.tatum.manager.data.BinaryManager;
+import com.tatum.service.data.BinaryManager;
 import com.tatum.factory.BinaryManagerFactory;
 import com.tatum.factory.imp.BinaryManagerFactoryImp;
 

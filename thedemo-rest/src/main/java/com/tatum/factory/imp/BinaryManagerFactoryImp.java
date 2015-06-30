@@ -3,7 +3,7 @@ package com.tatum.factory.imp;
 import com.tatum.exception.DemoRuntimeException;
 import com.tatum.factory.builder.BinaryManagerBuilder;
 import com.tatum.factory.config.BinaryManagerConfig;
-import com.tatum.manager.data.BinaryManager;
+import com.tatum.service.data.BinaryManager;
 import com.tatum.factory.BinaryManagerFactory;
 
 public class BinaryManagerFactoryImp implements BinaryManagerFactory {

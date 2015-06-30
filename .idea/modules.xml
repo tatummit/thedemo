@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/thedemo.iml" filepath="$PROJECT_DIR$/thedemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thedemo-autotest/thedemo-autotest.iml" filepath="$PROJECT_DIR$/thedemo-autotest/thedemo-autotest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thedemo-core/thedemo-core.iml" filepath="$PROJECT_DIR$/thedemo-core/thedemo-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/thedemo-nodejs/thedemo-nodejs.iml" filepath="$PROJECT_DIR$/thedemo-nodejs/thedemo-nodejs.iml" />
       <module fileurl="file://$PROJECT_DIR$/thedemo-rest/thedemo-rest.iml" filepath="$PROJECT_DIR$/thedemo-rest/thedemo-rest.iml" />
     </modules>

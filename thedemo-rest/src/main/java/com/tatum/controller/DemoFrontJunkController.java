@@ -21,7 +21,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import org.springframework.web.servlet.view.xml.MappingJackson2XmlView;
 import com.tatum.exception.DemoNotFoundObjectException;
-import com.tatum.manager.DemoOperationCollection;
+import com.tatum.service.DemoOperationCollection;
 import com.tatum.model.BinaryObject;
 import com.tatum.model.Person;
 

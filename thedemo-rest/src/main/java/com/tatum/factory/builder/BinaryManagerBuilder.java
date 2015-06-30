@@ -3,8 +3,8 @@ package com.tatum.factory.builder;
 import org.apache.commons.lang.StringUtils;
 import com.tatum.exception.DemoIllegalParameterException;
 import com.tatum.factory.config.BinaryManagerConfig;
-import com.tatum.manager.data.BinaryManager;
-import com.tatum.manager.data.imp.BinaryLocalFileManager;
+import com.tatum.service.data.BinaryManager;
+import com.tatum.service.data.imp.BinaryLocalFileManager;
 
 public class BinaryManagerBuilder<T extends BinaryManager> {
 

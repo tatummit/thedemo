@@ -5,9 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import com.tatum.exception.DemoNotFoundObjectException;
-import com.tatum.manager.DemoOperationCollection;
-import com.tatum.manager.data.BinaryManager;
-import com.tatum.manager.data.PersonManager;
+import com.tatum.service.DemoOperationCollection;
+import com.tatum.service.data.BinaryManager;
+import com.tatum.service.data.PersonManager;
 import com.tatum.model.BinaryObject;
 import com.tatum.model.Person;
 

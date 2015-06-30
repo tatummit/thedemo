@@ -1,6 +1,6 @@
 package com.tatum.config;
 
-import com.tatum.manager.data.imp.BinaryLocalFileManager;
+import com.tatum.service.data.imp.BinaryLocalFileManager;
 
 public class ApplicationProperties {
 
