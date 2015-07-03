@@ -3,3 +3,6 @@ server:
 
 multipart.maxFileSize: 4MB
 multipart.maxRequestSize: 4MB
+
+demo.quartz.interval: 0/3 * * * * ?
+demo.quartz.runnerJobs : 1
