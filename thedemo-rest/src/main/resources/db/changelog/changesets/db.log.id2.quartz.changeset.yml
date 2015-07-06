@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: tatum
+      changes:
+        - sqlFile:
+            endcoding: utf8
+            path: db/changelog/sql/tables_mysql.sql
+            splitStatements: true
+            stripComments: true
