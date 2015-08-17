@@ -4,6 +4,7 @@ databaseChangeLog:
       author: tatum
       changes:
         - sqlFile:
+            dbms: mysql
             endcoding: utf8
             path: db/changelog/sql/tables_mysql.sql
             splitStatements: true
