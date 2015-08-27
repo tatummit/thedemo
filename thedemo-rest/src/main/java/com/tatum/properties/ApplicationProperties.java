@@ -1,4 +1,4 @@
-package com.tatum.config;
+package com.tatum.properties;
 
 import com.tatum.service.data.imp.BinaryLocalFileManager;
 

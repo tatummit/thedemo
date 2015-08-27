@@ -1,6 +1,9 @@
 package com.tatum.config;
 
+import com.tatum.properties.ApplicationProperties;
+import com.tatum.properties.GoogleProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.env.YamlPropertySourceLoader;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +21,7 @@ import com.tatum.factory.imp.BinaryManagerFactoryImp;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Properties;
 
 @Configuration
 @EnableAutoConfiguration
@@ -57,5 +61,15 @@ public class ApplicationConfig {
         } catch (ClassNotFoundException e) {
             throw new DemoRuntimeException("Cannot found manager class",e);
         }
+    }
+
+    @Bean
+    public GoogleProperties googleProperties() throws IOException {
+        PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
+        propertiesFactoryBean.setLocation(new ClassPathResource("/google.properties"));
+        propertiesFactoryBean.afterPropertiesSet();
+        GoogleProperties googleProperties = new GoogleProperties();
+        googleProperties.setProperties(propertiesFactoryBean.getObject());
+        return googleProperties;
     }
 }

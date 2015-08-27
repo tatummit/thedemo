@@ -36,7 +36,7 @@ import java.net.URLConnection;
 public class DemoFrontJunkController {
 
     @Autowired
-    @Qualifier("DemoBackendOperation")
+    @Qualifier("DemoOperation")
     DemoOperationCollection demoOperations;
 
     @RequestMapping("/")

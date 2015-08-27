@@ -1,8 +1,10 @@
 package com.tatum.controller;
 
+import com.tatum.manager.GoogleManagerImpl;
 import com.tatum.service.DemoOperationCollection;
 import com.tatum.model.BinaryObject;
 import com.tatum.model.Person;
+import com.tatum.service.GoogleManager;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,6 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -28,11 +31,14 @@ import java.net.URLConnection;
 
 @RestController
 @RequestMapping("/webservice")
-public class DemoFrontController {
+public class DemoController {
 
     @Autowired
-    @Qualifier("DemoBackendOperation")
+    @Qualifier("DemoOperation")
     DemoOperationCollection demoOperations;
+
+    @Autowired
+    GoogleManagerImpl googleManager;
 
     @RequestMapping(value = "/person/{personid}", method = RequestMethod.GET
             , produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }
@@ -85,6 +91,13 @@ public class DemoFrontController {
         return ResponseEntity.accepted()
                 .contentType(MediaType.parseMediaType(binaryObject.getMime()))
                 .body(binaryObject.getBinary());
+    }
+
+
+    @RequestMapping(value ="/google", method = RequestMethod.GET)
+    public void invorkGoogleSheet(HttpServletResponse response) throws IOException {
+        String url = googleManager.doAutherized();
+        response.sendRedirect(url);
     }
 
 }

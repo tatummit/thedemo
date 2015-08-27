@@ -1,4 +1,4 @@
-package com.tatum.controller;
+package com.tatum.manager;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +11,9 @@ import com.tatum.service.data.PersonManager;
 import com.tatum.model.BinaryObject;
 import com.tatum.model.Person;
 
-@Service("DemoBackendOperation")
-@Qualifier("DemoBackendOperation")
-public class DemoBackController implements DemoOperationCollection{
+@Service("DemoOperation")
+@Qualifier("DemoOperation")
+public class DemoOperationImpl implements DemoOperationCollection{
 
     @Autowired
     @Qualifier("PersonDAO")
